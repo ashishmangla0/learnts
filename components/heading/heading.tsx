@@ -6,7 +6,7 @@
   }
   const Heading: React.FC<propsHeading> = (props) => {
       const {title,level} = props;
-    const H  = `h${level}`
+    const H  = `h${level}` as keyof JSX.IntrinsicAttributes;
     return (
         <>
             <H>
