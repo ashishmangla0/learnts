@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Heading from '../components/heading/heading'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -13,6 +14,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
+
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
@@ -65,6 +67,7 @@ const Home: NextPage = () => {
           </span>
         </a>
       </footer>
+      <Heading level={1} title={'ssssssssssssssssssssss'}/>
     </div>
   )
 }
