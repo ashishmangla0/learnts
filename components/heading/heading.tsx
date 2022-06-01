@@ -1,7 +1,7 @@
 
   type propsHeading = {
     level: number,
-    title?: any,
+    title?: string,
     className ?: string
   }
   const Heading: React.FC<propsHeading> = (props) => {
