@@ -1,23 +1,20 @@
+import { forwardRef } from "react";
+
 interface InputFeild{
     placeholder?: string,
-    inputType: string,
-    inputClass?: string
+    inputtype: string,
+    inputclass?: string
 } 
 
-const InputFeild: React.FC<InputFeild> = (props) => {
-    const {placeholder,inputType,inputClass} = props;
-    return(
-            <input 
-            className={inputClass}
-                type={inputType} 
-                placeholder={placeholder}
-            />
-    )
-}
+
+const InputFeild = forwardRef((props: InputFeild, ref: React.Ref<HTMLInputElement>) => {
+    return <input ref={ref} {...props} />;
+  });
+
 
 InputFeild.defaultProps = {
     placeholder: "",
-    inputType: "text",
-    inputClass: ""
+    inputtype: "text",
+    inputclass: ""
   }
 export default InputFeild;

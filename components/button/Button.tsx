@@ -1,11 +1,12 @@
 type ButtonProps = {
     value: string | React.ReactElement;
-    buttonClass?: string
+    buttonClass?: string;
+    handleButtonClick?: React.MouseEventHandler<HTMLButtonElement>
 } 
 const Button: React.FC<ButtonProps>  = (props) =>{
-    const {value,buttonClass} = props
+    const {value,buttonClass,handleButtonClick} = props
 
-return <button className={buttonClass}>
+return <button className={buttonClass} onClick={handleButtonClick}>
     {value}
 </button>
 }
@@ -13,5 +14,6 @@ return <button className={buttonClass}>
 Button.defaultProps = {
     value: "",
     buttonClass: "",
+    handleButtonClick:() =>{}
   }
 export default Button
