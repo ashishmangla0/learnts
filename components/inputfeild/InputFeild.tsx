@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import React, { forwardRef } from "react";
 
 interface InputFeild{
     placeholder?: string,
@@ -7,7 +7,7 @@ interface InputFeild{
 } 
 
 
-const InputFeild = forwardRef((props: InputFeild, ref: React.Ref<HTMLInputElement>) => {
+const InputFeild = React.forwardRef((props: InputFeild, ref: React.Ref<HTMLInputElement>) => {
     return <input ref={ref} {...props} />;
   });
 
