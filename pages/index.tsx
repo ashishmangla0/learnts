@@ -19,7 +19,7 @@ const Home: NextPage = () => {
   return (
     <>
 
-      <InputFeild inputtype='text' ref={aa} />
+      <InputFeild inputtype='text'  />
       <Button value={'search'} handleButtonClick={handleClick} />
 
     </>
